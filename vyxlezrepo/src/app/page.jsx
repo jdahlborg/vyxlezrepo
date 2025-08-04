@@ -440,9 +440,9 @@ function MainComponent() {
         </footer>
       </div>
 
-      {/* Styles */}
+      
      <style jsx global>{`
-  @keyframes neonGlow {
+      @keyframes neonGlow {
     0%, 100% {
       text-shadow: 0 0 3px #facc15, 0 0 6px #facc15;
     }
