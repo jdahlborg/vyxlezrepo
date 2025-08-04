@@ -120,9 +120,14 @@ function MainComponent() {
           id="home"
           className="text-center mb-16 min-h-screen flex flex-col justify-center"
         >
-          <div className="w-32 h-32 mx-auto mb-6 bg-gray-800 rounded-full border-2 border-yellow-400 flex items-center justify-center">
-            <i className="fas fa-user text-4xl text-yellow-400"></i>
-          </div>
+          <div className="w-32 h-32 mx-auto mb-6 bg-gray-800 rounded-full border-2 border-yellow-400 overflow-hidden">
+  <img
+    src="/images/vyxlogo.png"
+    alt="Profile"
+    className="w-full h-full object-cover"
+  />
+</div>
+
                  <h1 className="text-4xl md:text-6xl font-bold mb-4 text-yellow-400 neon-glow">
                   VYXLEZ
                   </h1>
