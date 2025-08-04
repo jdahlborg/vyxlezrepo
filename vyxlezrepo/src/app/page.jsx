@@ -2,8 +2,8 @@
 import React, { useState } from "react";
 
 function MainComponent() {
-  const [activeSection, setActiveSection] = useState("home");
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [activeSection, setActiveSection] = React.useState("home");
+  const [isMenuOpen, setIsMenuOpen] = React.useState(false);
   const [popupImage, setPopupImage] = useState(null);
 
   React.useEffect(() => {
@@ -37,32 +37,196 @@ function MainComponent() {
   };
 
   return (
-    <div className="bg-black text-white min-h-screen font-mono relative">
-      {popupImage && (
+  <div className="bg-black text-white min-h-screen font-mono relative">
+    {/* Image Popup (if active) */}
+    {popupImage && (
+      <div
+        className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm"
+        onClick={() => setPopupImage(null)}
+      >
         <div
-          className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm"
-          onClick={() => setPopupImage(null)}
+          className="relative max-w-3xl w-full p-4"
+          onClick={(e) => e.stopPropagation()}
         >
-          <div
-            className="relative max-w-3xl w-full p-4"
-            onClick={(e) => e.stopPropagation()}
+          <button
+            className="absolute top-4 right-4 text-white text-2xl hover:text-yellow-400"
+            onClick={() => setPopupImage(null)}
           >
-            <button
-              className="absolute top-4 right-4 text-white text-2xl hover:text-yellow-400"
-              onClick={() => setPopupImage(null)}
-            >
-              &times;
-            </button>
-            <img
-              src={popupImage}
-              alt="Enlarged"
-              className="w-full h-auto rounded border-4 border-yellow-400"
-            />
-          </div>
+            &times;
+          </button>
+          <img
+            src={popupImage}
+            alt="Enlarged"
+            className="w-full h-auto rounded border-4 border-yellow-400"
+          />
         </div>
-      )}
+      </div>
+    )}
 
-      {/* Projects Section */}
+    {/* Subtle background effect */}
+    <div className="fixed inset-0 opacity-10 pointer-events-none">
+      <div className="grid-bg"></div>
+    </div>
+
+      {/* Navigation */}
+      <nav className="fixed top-0 w-full bg-black/95 backdrop-blur-sm z-50 border-b-2 border-yellow-400 neon-border">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex justify-between items-center h-16">
+            <div
+              className="text-2xl font-bold text-yellow-400 cursor-pointer neon-text"
+              onClick={() => scrollToSection("home")}
+            >
+              <i className="fas fa-gamepad mr-2"></i>VYXLEZ
+            </div>
+
+            {/* Desktop Menu */}
+            <div className="hidden md:flex space-x-8">
+              {[
+                { id: "home", label: "Home", icon: "fa-home" },
+                { id: "about", label: "About", icon: "fa-user" },
+                { id: "projects", label: "Projects", icon: "fa-gamepad" },
+                { id: "commission", label: "Commission", icon: "fa-handshake" },
+                { id: "contact", label: "Contact", icon: "fa-envelope" },
+              ].map((item) => (
+                <button
+                  key={item.id}
+                  onClick={() => scrollToSection(item.id)}
+                  className={`flex items-center space-x-2 transition-all duration-300 hover:text-yellow-400 hover:neon-text px-3 py-2 border border-transparent hover:border-yellow-400 rounded ${
+                    activeSection === item.id
+                      ? "text-yellow-400 neon-text border-yellow-400"
+                      : "text-white"
+                  }`}
+                >
+                  <i className={`fas ${item.icon} text-sm`}></i>
+                  <span>{item.label}</span>
+                </button>
+              ))}
+            </div>
+
+            {/* Mobile Menu Button */}
+            <button
+              className="md:hidden text-yellow-400 neon-text"
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+            >
+              <i
+                className={`fas ${isMenuOpen ? "fa-times" : "fa-bars"} text-xl`}
+              ></i>
+            </button>
+          </div>
+
+          {/* Mobile Menu */}
+          {isMenuOpen && (
+            <div className="md:hidden bg-black/95 border-t-2 border-yellow-400 mobile-menu">
+              {[
+                { id: "home", label: "Home", icon: "fa-home" },
+                { id: "about", label: "About", icon: "fa-user" },
+                { id: "projects", label: "Projects", icon: "fa-gamepad" },
+                { id: "commission", label: "Commission", icon: "fa-handshake" },
+                { id: "contact", label: "Contact", icon: "fa-envelope" },
+              ].map((item, index) => (
+                <button
+                  key={item.id}
+                  onClick={() => scrollToSection(item.id)}
+                  className="flex items-center space-x-3 w-full text-left px-4 py-3 hover:text-yellow-400 hover:neon-text transition-all duration-300 border-l-4 border-transparent hover:border-yellow-400 hover:bg-yellow-400/10 mobile-menu-item"
+                  style={{ animationDelay: `${index * 0.1}s` }}
+                >
+                  <i className={`fas ${item.icon}`}></i>
+                  <span>{item.label}</span>
+                </button>
+              ))}
+            </div>
+          )}
+        </div>
+      </nav>
+
+      {/* Main Content */}
+      <div className="relative z-10 max-w-4xl mx-auto px-6 py-12 pt-24">
+        {/* Header */}
+        <header
+          id="home"
+          className="text-center mb-16 min-h-screen flex flex-col justify-center"
+        >
+          <div className="w-32 h-32 mx-auto mb-6 bg-gray-800 rounded-full border-2 border-yellow-400 overflow-hidden">
+  <img
+    src="/images/vyxlogo.png"
+    alt="Profile"
+    className="w-full h-full object-cover"
+  />
+</div>
+
+                 <h1 className="text-4xl md:text-6xl font-bold mb-4 text-yellow-400 neon-glow">
+                  VYXLEZ
+                  </h1>
+
+          <div className="terminal-line text-green-400 text-lg mb-6">
+            {">"} Roblox Game Builder
+          </div>
+          <div className="text-gray-400 mb-8">
+            Creating immersive experiences in the Roblox metaverse
+          </div>
+          <button
+            onClick={() => scrollToSection("projects")}
+            className="mx-auto bg-yellow-400 text-black px-6 py-3 font-bold hover:bg-yellow-300 transition-all duration-300 transform hover:scale-105 border-2 border-yellow-400 hover:border-yellow-300"
+          >
+            <i className="fas fa-play mr-2"></i>VIEW PROJECTS
+          </button>
+        </header>
+
+        {/* About Section */}
+        <section
+          id="about"
+          className="mb-16 min-h-screen flex flex-col justify-center"
+        >
+          <h2 className="text-2xl font-bold text-yellow-400 mb-6 neon-text">
+            <i className="fas fa-user mr-2"></i>ABOUT ME
+          </h2>
+          <div className="gaming-card bg-gray-900/50 p-6 border border-yellow-400/30 rounded-lg">
+            <p className="text-gray-300 mb-6 leading-relaxed">
+              I'm a passionate Roblox developer specializing in creating
+              engaging games and experiences. With years of experience in
+              building, modeling, and scripting, I bring creative visions to
+              life in the Roblox platform. I love crafting unique gameplay
+              mechanics and stunning visual environments.
+            </p>
+
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+              {[
+                {
+                  skill: "Building",
+                  rating: "Expert",
+                  color: "text-green-400",
+                },
+                {
+                  skill: "Modelling",
+                  rating: "Expert",
+                  color: "text-green-400",
+                },
+                {
+                  skill: "Animating",
+                  rating: "Learning",
+                  color: "text-yellow-400",
+                },
+                {
+                  skill: "Scripting",
+                  rating: "Learning",
+                  color: "text-yellow-400",
+                },
+              ].map((item) => (
+                <div
+                  key={item.skill}
+                  className="text-center p-3 bg-black/30 rounded border border-yellow-400/20"
+                >
+                  <div className="text-yellow-400 font-bold mb-1">
+                    {item.skill}
+                  </div>
+                  <div className={`text-sm ${item.color}`}>{item.rating}</div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Projects Section */}
       <section id="projects" className="mb-16">
         <h2 className="text-2xl font-bold text-yellow-400 mb-6 neon-text">
           <i className="fas fa-gamepad mr-2"></i>PROJECTS
