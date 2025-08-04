@@ -441,7 +441,7 @@ function MainComponent() {
       </div>
 
       {/* Styles */}
-      <style jsx global>{
+     <style jsx global>{`
   @keyframes neonGlow {
     0%, 100% {
       text-shadow: 0 0 3px #facc15, 0 0 6px #facc15;
@@ -529,7 +529,7 @@ function MainComponent() {
   section {
     scroll-margin-top: 80px;
   }
-}</style>
+`}</style>
     </div>
   );
 }
