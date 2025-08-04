@@ -216,7 +216,7 @@ function MainComponent() {
                   "/images/castles.png",
               },
               {
-                title: "Test Club (made in 2h)",
+                title: "Social Hangout Club",
                 tech: "Building, Modeling, Physics",
                 description:
                   "Club made in 2h to test skills",
@@ -227,7 +227,7 @@ function MainComponent() {
                 title: "Haunted House",
                 tech: "Building",
                 description:
-                  "Game map made for a haunted house",
+                  "Haunted house with an eerie environment",
                 image:
                   "/images/horror.png",
               },
@@ -264,7 +264,7 @@ function MainComponent() {
                   "/images/snow.png",
               },
               {
-                title: "Showcase",
+                title: "Forest Showecase",
                 tech: "Building",
                 description:
                   "Build to showcase skills",
@@ -364,23 +364,19 @@ function MainComponent() {
                 </div>
                 <div className="text-gray-300">
                   <i className="fas fa-check text-green-400 mr-2"></i>3D
-                  modeling & assets
+                  modeling & textures
                 </div>
                 <div className="text-gray-300">
-                  <i className="fas fa-check text-green-400 mr-2"></i>Building &
-                  world design
+                  <i className="fas fa-check text-green-400 mr-2"></i>Advanced lighting
                 </div>
                 <div className="text-gray-300">
-                  <i className="fas fa-check text-green-400 mr-2"></i>UI/UX
-                  design
+                  <i className="fas fa-check text-green-400 mr-2"></i>Map designing
                 </div>
                 <div className="text-gray-300">
-                  <i className="fas fa-check text-green-400 mr-2"></i>Scripting
-                  & mechanics
+                  <i className="fas fa-check text-green-400 mr-2"></i> Atmosphere fixing
                 </div>
                 <div className="text-gray-300">
-                  <i className="fas fa-check text-green-400 mr-2"></i>Project
-                  consultation
+                  <i className="fas fa-check text-green-400 mr-2"></i> Environmental editor
                 </div>
               </div>
             </div>
