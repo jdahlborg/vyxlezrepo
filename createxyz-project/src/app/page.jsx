@@ -123,10 +123,10 @@ function MainComponent() {
           <div className="w-32 h-32 mx-auto mb-6 bg-gray-800 rounded-full border-2 border-yellow-400 flex items-center justify-center">
             <i className="fas fa-user text-4xl text-yellow-400"></i>
           </div>
-          <h1 className="text-4xl md:text-6xl font-bold mb-4">
-            <span className="text-white">VYX</span>
-            <span className="text-yellow-400 neon-glow">LEZ</span>
-          </h1>
+                 <h1 className="text-4xl md:text-6xl font-bold mb-4 text-yellow-400 neon-glow">
+                  VYXLEZ
+                  </h1>
+
           <div className="terminal-line text-green-400 text-lg mb-6">
             {">"} Roblox Game Builder
           </div>
