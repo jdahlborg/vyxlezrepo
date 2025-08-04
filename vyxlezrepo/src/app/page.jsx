@@ -502,41 +502,43 @@ function MainComponent() {
         </p>
       </footer>
 
-      <style jsx global>{`
-        @keyframes neonGlow {
-          0%, 100% {
-            text-shadow: 0 0 3px #facc15, 0 0 6px #facc15;
-          }
-          50% {
-            text-shadow: 0 0 4px #facc15, 0 0 8px #facc15;
-          }
-        }
+      <style jsx global>
+  {`
+    @keyframes neonGlow {
+      0%, 100% {
+        text-shadow: 0 0 3px #facc15, 0 0 6px #facc15;
+      }
+      50% {
+        text-shadow: 0 0 4px #facc15, 0 0 8px #facc15;
+      }
+    }
 
-        .neon-glow {
-          animation: neonGlow 2s ease-in-out infinite;
-        }
+    .neon-glow {
+      animation: neonGlow 2s ease-in-out infinite;
+    }
 
-        .neon-text {
-          text-shadow: 0 0 3px #facc15, 0 0 6px #facc15;
-        }
+    .neon-text {
+      text-shadow: 0 0 3px #facc15, 0 0 6px #facc15;
+    }
 
-        .neon-border {
-          box-shadow: 0 0 10px rgba(250, 204, 21, 0.3);
-        }
+    .neon-border {
+      box-shadow: 0 0 10px rgba(250, 204, 21, 0.3);
+    }
 
-        .gaming-card {
-          background: linear-gradient(135deg, rgba(0,0,0,0.7), rgba(20,20,20,0.7));
-          backdrop-filter: blur(5px);
-        }
+    .gaming-card {
+      background: linear-gradient(135deg, rgba(0,0,0,0.7), rgba(20,20,20,0.7));
+      backdrop-filter: blur(5px);
+    }
 
-        html {
-          scroll-behavior: smooth;
-        }
+    html {
+      scroll-behavior: smooth;
+    }
 
-        section {
-          scroll-margin-top: 80px;
-        }
-      `}</style>
+    section {
+      scroll-margin-top: 80px;
+    }
+  `}
+</style>
     </div>
   );
 }
