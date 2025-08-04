@@ -4,8 +4,8 @@ import './globals.css';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata = {
-  title: 'noxability',
-  description: 'Made by nox',
+  title: 'Vyxlez Portfolio',
+  description: 'I am a passionate Roblox developer specializing in creating engaging games and experiences. With years of experience in building, modeling, and scripting, I bring creative visions to life in the Roblox platform. I love crafting unique gameplay mechanics and stunning visual environments.',
 };
 
 export default function RootLayout({ children }) {
