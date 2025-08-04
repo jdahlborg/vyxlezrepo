@@ -208,12 +208,12 @@ function MainComponent() {
           <div className="grid md:grid-cols-2 gap-6">
             {[
               {
-                title: "Castles Island",
-                tech: "Advanced Building",
+                title: "Forest Showecase",
+                tech: "Building",
                 description:
-                  "Massive floating castle islands made for YouTuber PPyth0n",
+                  "Build to showcase skills",
                 image:
-                  "/images/castles.png",
+                  "/images/scary.png",
               },
               {
                 title: "Social Hangout Club",
@@ -264,12 +264,12 @@ function MainComponent() {
                   "/images/snow.png",
               },
               {
-                title: "Forest Showecase",
-                tech: "Building",
+                title: "Castles Island",
+                tech: "Advanced Building",
                 description:
-                  "Build to showcase skills",
+                  "Massive floating castle islands made for YouTuber PPyth0n",
                 image:
-                  "/images/scary.png",
+                  "/images/castles.png",
               },
             ].map((project, index) => (
               <div
@@ -373,10 +373,10 @@ function MainComponent() {
                   <i className="fas fa-check text-green-400 mr-2"></i>Map designing
                 </div>
                 <div className="text-gray-300">
-                  <i className="fas fa-check text-green-400 mr-2"></i> Atmosphere fixing
+                  <i className="fas fa-check text-green-400 mr-2"></i>Atmosphere fixing
                 </div>
                 <div className="text-gray-300">
-                  <i className="fas fa-check text-green-400 mr-2"></i> Environmental editor
+                  <i className="fas fa-check text-green-400 mr-2"></i>Environmental editor
                 </div>
               </div>
             </div>
@@ -397,7 +397,7 @@ function MainComponent() {
             <div className="grid md:grid-cols-3 gap-6">
               {[
                 {
-                  icon: "fa-envelope",
+                  icon: "fa-solid fa-envelope",
                   label: "Email",
                   value: "vyxlez@gmail.com",
                   color: "text-red-400",
