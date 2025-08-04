@@ -441,96 +441,95 @@ function MainComponent() {
       </div>
 
       {/* Styles */}
-      <style jsx global>{`
-        @keyframes neonGlow {
-          0%, 100% { 
-            text-shadow: 0 0 5px #facc15, 0 0 10px #facc15, 0 0 15px #facc15;
-          }
-          50% { 
-            text-shadow: 0 0 10px #facc15, 0 0 20px #facc15, 0 0 30px #facc15;
-          }
-        }
+      <style jsx global>{
+  @keyframes neonGlow {
+    0%, 100% {
+      text-shadow: 0 0 3px #facc15, 0 0 6px #facc15;
+    }
+    50% {
+      text-shadow: 0 0 4px #facc15, 0 0 8px #facc15;
+    }
+  }
 
-        @keyframes slideDown {
-          from { 
-            opacity: 0; 
-            transform: translateY(-10px); 
-          }
-          to { 
-            opacity: 1; 
-            transform: translateY(0); 
-          }
-        }
+  .neon-glow {
+    animation: neonGlow 2s ease-in-out infinite;
+  }
 
-        @keyframes fadeInUp {
-          from { 
-            opacity: 0; 
-            transform: translateY(20px); 
-          }
-          to { 
-            opacity: 1; 
-            transform: translateY(0); 
-          }
-        }
+  .neon-text {
+    text-shadow: 0 0 3px #facc15, 0 0 6px #facc15;
+  }
 
-        .neon-glow {
-          animation: neonGlow 2s ease-in-out infinite;
-        }
+  .neon-border {
+    box-shadow: 0 0 10px rgba(250, 204, 21, 0.3);
+  }
 
-        .neon-text {
-          text-shadow: 0 0 5px #facc15, 0 0 10px #facc15;
-        }
+  .terminal-line {
+    font-family: 'Courier New', monospace;
+    border-right: 2px solid #22c55e;
+    animation: blink-caret 1s step-end infinite;
+  }
 
-        .neon-border {
-          box-shadow: 0 0 10px rgba(250, 204, 21, 0.3);
-        }
+  @keyframes blink-caret {
+    from, to { border-color: transparent; }
+    50% { border-color: #22c55e; }
+  }
 
-        .terminal-line {
-          font-family: 'Courier New', monospace;
-          border-right: 2px solid #22c55e;
-          animation: blink-caret 1s step-end infinite;
-        }
+  .gaming-card {
+    background: linear-gradient(135deg, rgba(0,0,0,0.7) 0%, rgba(20,20,20,0.7) 100%);
+    backdrop-filter: blur(5px);
+  }
 
-        @keyframes blink-caret {
-          from, to { border-color: transparent; }
-          50% { border-color: #22c55e; }
-        }
+  .gaming-card:hover {
+    box-shadow: 0 0 20px rgba(250, 204, 21, 0.1);
+  }
 
-        .gaming-card {
-          background: linear-gradient(135deg, rgba(0,0,0,0.7) 0%, rgba(20,20,20,0.7) 100%);
-          backdrop-filter: blur(5px);
-        }
+  .grid-bg {
+    background-image: 
+      linear-gradient(rgba(250, 204, 21, 0.1) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(250, 204, 21, 0.1) 1px, transparent 1px);
+    background-size: 50px 50px;
+    width: 100%;
+    height: 100%;
+  }
 
-        .gaming-card:hover {
-          box-shadow: 0 0 20px rgba(250, 204, 21, 0.1);
-        }
+  .mobile-menu {
+    animation: slideDown 0.3s ease-out;
+  }
 
-        .grid-bg {
-          background-image: 
-            linear-gradient(rgba(250, 204, 21, 0.1) 1px, transparent 1px),
-            linear-gradient(90deg, rgba(250, 204, 21, 0.1) 1px, transparent 1px);
-          background-size: 50px 50px;
-          width: 100%;
-          height: 100%;
-        }
+  .mobile-menu-item {
+    animation: fadeInUp 0.3s ease-out both;
+  }
 
-        .mobile-menu {
-          animation: slideDown 0.3s ease-out;
-        }
+  @keyframes slideDown {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
 
-        .mobile-menu-item {
-          animation: fadeInUp 0.3s ease-out both;
-        }
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
 
-        html {
-          scroll-behavior: smooth;
-        }
+  html {
+    scroll-behavior: smooth;
+  }
 
-        /* Smooth scroll offset for fixed nav */
-        section {
-          scroll-margin-top: 80px;
-        }
-      `}</style>
+  section {
+    scroll-margin-top: 80px;
+  }
+}</style>
     </div>
   );
 }
