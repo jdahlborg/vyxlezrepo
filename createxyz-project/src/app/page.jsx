@@ -203,66 +203,66 @@ function MainComponent() {
           <div className="grid md:grid-cols-2 gap-6">
             {[
               {
-                title: "Adventure RPG World",
-                tech: "Building, Scripting, UI Design",
+                title: "Castles Island",
+                tech: "Advanced Building",
                 description:
-                  "Massive open-world RPG with custom quests and combat system",
+                  "Massive floating castle islands made for YouTuber PPyth0n",
                 image:
                   "/images/castles.png",
               },
               {
-                title: "Racing Championship",
+                title: "Test Club (made in 2h)",
                 tech: "Building, Modeling, Physics",
                 description:
-                  "High-speed racing game with custom vehicles and tracks",
+                  "Club made in 2h to test skills",
                 image:
                   "/images/club.png",
               },
               {
-                title: "Survival Island",
-                tech: "Building, Scripting, Animation",
+                title: "Haunted House",
+                tech: "Building",
                 description:
-                  "Multiplayer survival game with crafting and base building",
+                  "Game map made for a haunted house",
                 image:
                   "/images/horror.png",
               },
               {
-                title: "Tycoon Empire",
-                tech: "Building, Scripting, UI",
+                title: "Dead Sands",
+                tech: "Advanced Building",
                 description:
-                  "Business simulation tycoon with complex economy system",
+                  "Map made for popular game Dead Sands, similar to Dead Rails, which peaked at over 10k CCU",
                 image:
                   "/images/road.png",
               },
               {
-                title: "Horror Mansion",
-                tech: "Building, Modeling, Scripting",
+                title: "Go Kart Game Lobby",
+                tech: "Building",
                 description:
-                  "Atmospheric horror experience with immersive storytelling",
+                  "Build for a go kart game, similar to RIVALS",
                 image:
                   "/images/room.png",
               },
               {
-                title: "Parkour Paradise",
-                tech: "Building, Animation, Physics",
+                title: "Death Penalty",
+                tech: "Advanced Building and Modeling",
                 description:
-                  "Challenging parkour course with fluid movement mechanics",
+                  "Game map for Death Penalty",
                 image:
                   "/images/roulette.png",
               },
               {
-                title: "Space Station Simulator",
-                tech: "Building, Modeling, Scripting",
+                title: "Snowy Mountain",
+                tech: "Building",
                 description:
-                  "Realistic space station management and exploration game",
+                  "Realistic game map for a snowy moutain based off of a real life location",
                 image:
                   "/images/snow.png",
               },
               {
-                title: "Medieval Kingdom",
-                tech: "Building, Modeling, Animation",
+                title: "Showcase",
+                tech: "Building",
                 description:
-                  "Medieval roleplay world with castles and interactive NPCs",
+                  "Build to showcase skills",
                 image:
                   "/images/scary.png",
               },
