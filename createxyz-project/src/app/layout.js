@@ -4,8 +4,8 @@ import './globals.css'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
-  title: 'noxability',
-  description: 'Made by nox',
+  title: 'Vyxlez Portfolio',
+  description: 'Vyxlez portofolio website',
 }
 
 export default function RootLayout({ children }) {
