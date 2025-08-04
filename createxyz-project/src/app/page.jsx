@@ -208,7 +208,7 @@ function MainComponent() {
                 description:
                   "Massive open-world RPG with custom quests and combat system",
                 image:
-                  "https://via.placeholder.com/300x200/1a1a1a/facc15?text=RPG+World",
+                  "/images/castles.png",
               },
               {
                 title: "Racing Championship",
@@ -216,7 +216,7 @@ function MainComponent() {
                 description:
                   "High-speed racing game with custom vehicles and tracks",
                 image:
-                  "https://via.placeholder.com/300x200/1a1a1a/facc15?text=Racing+Game",
+                  "/images/club.png",
               },
               {
                 title: "Survival Island",
@@ -224,7 +224,7 @@ function MainComponent() {
                 description:
                   "Multiplayer survival game with crafting and base building",
                 image:
-                  "https://via.placeholder.com/300x200/1a1a1a/facc15?text=Survival+Island",
+                  "/images/horror.png",
               },
               {
                 title: "Tycoon Empire",
@@ -232,7 +232,7 @@ function MainComponent() {
                 description:
                   "Business simulation tycoon with complex economy system",
                 image:
-                  "https://via.placeholder.com/300x200/1a1a1a/facc15?text=Tycoon+Game",
+                  "/images/road.png",
               },
               {
                 title: "Horror Mansion",
@@ -240,7 +240,7 @@ function MainComponent() {
                 description:
                   "Atmospheric horror experience with immersive storytelling",
                 image:
-                  "https://via.placeholder.com/300x200/1a1a1a/facc15?text=Horror+Game",
+                  "/images/room.png",
               },
               {
                 title: "Parkour Paradise",
@@ -248,7 +248,7 @@ function MainComponent() {
                 description:
                   "Challenging parkour course with fluid movement mechanics",
                 image:
-                  "https://via.placeholder.com/300x200/1a1a1a/facc15?text=Parkour+Game",
+                  "/images/roulette.png",
               },
               {
                 title: "Space Station Simulator",
@@ -256,7 +256,7 @@ function MainComponent() {
                 description:
                   "Realistic space station management and exploration game",
                 image:
-                  "https://via.placeholder.com/300x200/1a1a1a/facc15?text=Space+Station",
+                  "/images/snow.png",
               },
               {
                 title: "Medieval Kingdom",
@@ -264,7 +264,7 @@ function MainComponent() {
                 description:
                   "Medieval roleplay world with castles and interactive NPCs",
                 image:
-                  "https://via.placeholder.com/300x200/1a1a1a/facc15?text=Medieval+Game",
+                  "/images/scary.png",
               },
             ].map((project, index) => (
               <div
