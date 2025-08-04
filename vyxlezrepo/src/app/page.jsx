@@ -533,9 +533,12 @@ function MainComponent() {
     scroll-behavior: smooth;
   }
 
-  section {
-    scroll-margin-top: 80px;
-  }
+        section {
+        scroll-margin-top: 80px;
+      }
 `}</style>
+    </div>
+  );
+}
 
 export default MainComponent;
